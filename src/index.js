@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import MainContext from './contexts/MainContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
@@ -12,7 +13,9 @@ AOS.init()
 
 root.render(
   <React.StrictMode>
-    <App />
+    <MainContext>
+      <App />
+    </MainContext>
   </React.StrictMode>
 );
 

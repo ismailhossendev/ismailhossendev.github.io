@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaGithub, FaCode } from "react-icons/fa"
 import { motion } from 'framer-motion';
+import { mainContext } from '../contexts/MainContext';
 const ProjectCard = () => {
+    const { light } = useContext(mainContext);
     return (
-        <motion.div className="card bg-black  shadow-xl p-2 rounded-md"
+        <motion.div className="card   shadow-xl p-2 rounded-md"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
         >
@@ -15,8 +17,8 @@ const ProjectCard = () => {
                 </h2>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
                 <div className="card-actions justify-end">
-                    <div className="btn-sm btn rounded-lg btn-outline gap-1 normal-case"><FaCode /> Preview</div>
-                    <div className="btn-sm btn rounded-lg btn-outline gap-1 normal-case"><FaGithub /> GitHub</div>
+                    <div className={`btn-sm btn rounded-lg ${light ? "" : 'btn-outline'} gap-1 normal-case`}><FaCode /> Preview</div>
+                    <div className={`btn-sm btn rounded-lg ${light ? "" : 'btn-outline'} gap-1 normal-case`}><FaGithub /> GitHub</div>
                 </div>
             </div>
         </motion.div>
