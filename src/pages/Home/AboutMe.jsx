@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 const AboutMe = () => {
     return (
-        <div className='lg:h-[60vh] grid md:grid-cols-2 lg:p-10 p-2 my-5'>
+        <div data-aos="fade-up" className='lg:h-[60vh] grid md:grid-cols-2 lg:p-10 p-2 my-5'>
             <motion.div className="flex justify-center flex-col"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
